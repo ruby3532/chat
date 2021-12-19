@@ -10,7 +10,7 @@ def read_file(filename):
 # 轉換格式
 def convert(lines):
 	new = []
-	person = None
+	person = None # 無的預設值
 	for line in lines:
 		if line == 'Allen':
 			person = 'Allen' # 存下來的話，就可以用
@@ -28,6 +28,7 @@ def write_file(filename, lines):
 		for line in lines:
 			f.write(line + '\n')
 
+# 主要的 function
 def main():
 	lines = read_file('input.txt')	
 	lines = convert(lines)
